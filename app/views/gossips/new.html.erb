@@ -1,0 +1,7 @@
+<h1>Create a new gossip</h1>
+
+<%= form_for @gossip, url: {action: "new"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :anonymous_author %>
+  <%= f.text_area :content, size: "60x12" %>
+  <%= f.submit "new" %>
+<% end %>
