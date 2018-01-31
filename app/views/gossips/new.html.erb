@@ -1,7 +1,11 @@
-<h1>Create a new gossip</h1>
+<h1> Lancer un nouveau gossip</h1>
 
-<%= form_for @gossip, url: {action: "new"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :anonymous_author %>
-  <%= f.text_area :content, size: "60x12" %>
-  <%= f.submit "new" %>
+<%= form_tag (gossips_path) do %>
+<%= label_tag 'anonymous_author', "Votre pseudo de délateur" %>
+<%= text_field_tag 'anonymous_author' %>
+<br>
+<%= label_tag 'content', 'La rumeur à balancer' %>
+<%= text_area_tag 'content' %>
+<br><br>
+<%= submit_tag "Lancer !"%>
 <% end %>

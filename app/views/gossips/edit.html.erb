@@ -1,0 +1,9 @@
+<h1>Editer le gossip</h1>
+
+
+<%= form_tag gossips_path(@gossip), method: :put do %>
+  <%= render 'form' %>
+	<%= submit_tag "Modifier ton gossip !"%> 
+<% end %>
+
+<%= link_to 'Clique pour détruire', @gossip, method: :delete %>
